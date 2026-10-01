@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pavlo Tsyhanash — Motion / UI / Brand / 3D</title>
+<meta name="description" content="Portfolio of Pavlo Tsyhanash — motion, interface, brand and real-time 3D design.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="is-loading">
+
+<div class="loader" aria-hidden="true">
+  <div class="loader__panel loader__panel--top"></div>
+  <div class="loader__panel loader__panel--bot"></div>
+  <div class="loader__count"><span id="loadNum">0</span><i>%</i></div>
+  <div class="loader__label">LOADING SHOWREEL 2026</div>
+</div>
+
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"><div class="cursor__dot"></div><div class="cursor__ring"><span></span></div></div>
+<div class="progress" aria-hidden="true"><i></i></div>
+
+<header class="nav">
+  <a href="#hero" class="nav__logo" data-magnet>
+    <svg viewBox="-50 -50 100 100" class="star" aria-hidden="true"><g stroke="currentColor" stroke-width="13" stroke-linecap="round"><path d="M-38 0H38"/><path d="M-27 -27L27 27"/><path d="M0 -38V38"/><path d="M27 -27L-27 27"/></g></svg>
+    <span>PAVLO T.</span>
+  </a>
+  <nav class="nav__links">
+    <a href="#reel" data-magnet>Reel</a>
+    <a href="#work" data-magnet>Work</a>
+    <a href="#skills" data-magnet>Skills</a>
+    <a href="#lab" data-magnet>Lab</a>
+    <a href="#process" data-magnet>Process</a>
+  </nav>
+  <a href="#contact" class="pill pill--live" data-magnet><i></i>Available for work</a>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section id="hero" class="hero" data-bg="#08080c" data-fg="#f3f0e8">
+  <div class="hero__shapes" aria-hidden="true">
+    <span class="shape shape--circle" data-depth="40"></span>
+    <span class="shape shape--square" data-depth="-60"></span>
+    <span class="shape shape--tri" data-depth="80"></span>
+    <span class="shape shape--ring" data-depth="-30"></span>
+  </div>
+  <p class="eyebrow reveal-line"><span>(Portfolio — 2026)</span></p>
+  <h1 class="hero__title" aria-label="Pavlo Tsyhanash">
+    <span class="row" data-split>PAVLO</span>
+    <span class="row row--outline" data-split>TSYHANASH</span>
+  </h1>
+  <div class="hero__foot">
+    <p class="hero__lead reveal-line"><span>I design things that <em>move</em> — identities, interfaces and real-time 3D that feel alive at 60 frames per second.</span></p>
+    <div class="badge" aria-hidden="true">
+      <svg viewBox="0 0 200 200"><defs><path id="circ" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs><text><textPath href="#circ">MOTION • UI • BRAND • 3D • MOTION • UI • BRAND • 3D •</textPath></text></svg>
+      <b>↓</b>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track"><span>DESIGN IN MOTION ✺ KINETIC TYPE ✺ INTERFACES ✺ BRAND SYSTEMS ✺ REAL-TIME 3D ✺ CREATIVE CODE ✺ </span><span>DESIGN IN MOTION ✺ KINETIC TYPE ✺ INTERFACES ✺ BRAND SYSTEMS ✺ REAL-TIME 3D ✺ CREATIVE CODE ✺ </span></div>
+</div>
+
+<!-- REEL -->
+<section id="reel" class="reel" data-bg="#08080c" data-fg="#f3f0e8">
+  <div class="reel__head">
+    <p class="eyebrow"><span>(01) Showreel</span></p>
+    <h2 class="h2" data-split-words>15 seconds. Everything I do.</h2>
+  </div>
+  <div class="reel__stage">
+    <div class="reel__frame" data-cursor="SOUND">
+      <video id="reelVideo" muted loop playsinline preload="metadata"><source src="../reel/reel.webm" type="video/webm"><source src="../reel/reel.mp4" type="video/mp4"></video>
+      <div class="reel__ui"><span class="pill pill--dark" id="soundPill">Click for sound</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work" class="work" data-bg="#08080c" data-fg="#f3f0e8">
+  <div class="work__pin">
+    <div class="work__head">
+      <p class="eyebrow"><span>(02) Selected concepts</span></p>
+      <h2 class="h2">Work<sup>05</sup></h2>
+      <p class="work__hint">Scroll → <span class="work__count"><b id="workIdx">01</b>/05</span></p>
+    </div>
+    <div class="work__track" id="workTrack">
+      <article class="card" data-art="orbit" data-cursor="VIEW" style="--c:#c8ff3c">
+        <div class="card__art"><canvas></canvas></div>
+        <div class="card__meta"><h3>Orbit</h3><p>Motion identity</p><span>Concept · 2026</span></div>
+        <div class="card__num">01</div>
+      </article>
+      <article class="card" data-art="tide" data-cursor="VIEW" style="--c:#2de2e6">
+        <div class="card__art"><canvas></canvas></div>
+        <div class="card__meta"><h3>Tidal</h3><p>Data visualisation</p><span>Concept · 2026</span></div>
+        <div class="card__num">02</div>
+      </article>
+      <article class="card" data-art="grid" data-cursor="VIEW" style="--c:#ff2d87">
+        <div class="card__art"><canvas></canvas></div>
+        <div class="card__meta"><h3>Gridlock</h3><p>UI system &amp; motion tokens</p><span>Concept · 2026</span></div>
+        <div class="card__num">03</div>
+      </article>
+      <article class="card" data-art="solid" data-cursor="VIEW" style="--c:#3b5cff">
+        <div class="card__art"><canvas></canvas></div>
+        <div class="card__meta"><h3>Volume</h3><p>Real-time 3D</p><span>Concept · 2026</span></div>
+        <div class="card__num">04</div>
+      </article>
+      <article class="card" data-art="type" data-cursor="VIEW" style="--c:#f3f0e8">
+        <div class="card__art"><canvas></canvas></div>
+        <div class="card__meta"><h3>Kern</h3><p>Kinetic type specimen</p><span>Concept · 2026</span></div>
+        <div class="card__num">05</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="skills" data-bg="#f3f0e8" data-fg="#0b0b10">
+  <p class="eyebrow"><span>(03) Capabilities</span></p>
+  <h2 class="h2" data-split-words>What I bring to the frame</h2>
+  <ul class="skill-list">
+    <li class="skill" data-cursor="+">
+      <span class="skill__n">01</span><h3>Motion design</h3>
+      <p>Kinetic type, transitions, easing that has opinions.</p>
+      <span class="skill__tags">After Effects · Rive · Lottie · CSS/JS</span>
+      <i class="skill__bar" style="--c:#c8ff3c"></i>
+    </li>
+    <li class="skill" data-cursor="+">
+      <span class="skill__n">02</span><h3>Interface design</h3>
+      <p>Systems with rhythm — components, states, micro-interactions.</p>
+      <span class="skill__tags">Figma · Design systems · Prototyping</span>
+      <i class="skill__bar" style="--c:#ff2d87"></i>
+    </li>
+    <li class="skill" data-cursor="+">
+      <span class="skill__n">03</span><h3>Brand identity</h3>
+      <p>Logos that animate, palettes that hold up, voices that stick.</p>
+      <span class="skill__tags">Identity · Type · Guidelines</span>
+      <i class="skill__bar" style="--c:#3b5cff"></i>
+    </li>
+    <li class="skill" data-cursor="+">
+      <span class="skill__n">04</span><h3>3D &amp; real-time</h3>
+      <p>Shaders, particles and scenes that run in a browser tab.</p>
+      <span class="skill__tags">Three.js · WebGL · Blender</span>
+      <i class="skill__bar" style="--c:#2de2e6"></i>
+    </li>
+    <li class="skill" data-cursor="+">
+      <span class="skill__n">05</span><h3>Creative code</h3>
+      <p>This site is hand-written canvas, CSS and ~0 dependencies.</p>
+      <span class="skill__tags">JavaScript · Canvas · GLSL</span>
+      <i class="skill__bar" style="--c:#0b0b10"></i>
+    </li>
+  </ul>
+  <div class="stats">
+    <div><b data-count="60">0</b><span>FPS target</span></div>
+    <div><b data-count="0">0</b><span>Templates used</span></div>
+    <div><b data-count="1000">0</b><span>Easing curves tweaked</span></div>
+    <div><b data-count="100">0</b><span>% obsessed with details</span></div>
+  </div>
+</section>
+
+<!-- LAB -->
+<section id="lab" class="lab" data-bg="#0d1030" data-fg="#f3f0e8">
+  <p class="eyebrow"><span>(04) Playground</span></p>
+  <h2 class="h2" data-split-words>Touch everything</h2>
+  <div class="lab__grid">
+    <div class="tile tile--ease">
+      <header><span>A</span><h3>Easing lab</h3></header>
+      <canvas id="easeCanvas"></canvas>
+      <div class="chips" id="easeChips"></div>
+    </div>
+    <div class="tile tile--spring" data-cursor="DRAG">
+      <header><span>B</span><h3>Spring physics</h3><em>drag the ball</em></header>
+      <canvas id="springCanvas"></canvas>
+    </div>
+    <div class="tile tile--field" data-cursor="MOVE">
+      <header><span>C</span><h3>Magnetic field</h3><em>move your cursor</em></header>
+      <canvas id="fieldCanvas"></canvas>
+    </div>
+    <div class="tile tile--tilt">
+      <header><span>D</span><h3>Depth card</h3><em>hover</em></header>
+      <div class="tilt" id="tilt">
+        <div class="tilt__layer tilt__layer--1"></div>
+        <div class="tilt__layer tilt__layer--2"></div>
+        <div class="tilt__layer tilt__layer--3"><b>3D</b></div>
+        <div class="tilt__glare"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="process" data-bg="#c8ff3c" data-fg="#0b0b10">
+  <p class="eyebrow"><span>(05) Process</span></p>
+  <h2 class="h2" data-split-words>From blank frame to final render</h2>
+  <div class="steps" id="steps">
+    <div class="steps__line"><i id="stepsFill"></i></div>
+    <div class="step"><span class="step__n">01</span><div><h3>Listen</h3><p>Goals, audience, constraints. I ask annoying questions early so the pixels don't have to.</p></div></div>
+    <div class="step"><span class="step__n">02</span><div><h3>Sketch &amp; storyboard</h3><p>Fast, ugly, honest. Motion gets a storyboard, interfaces get flows.</p></div></div>
+    <div class="step"><span class="step__n">03</span><div><h3>Build in motion</h3><p>Prototype with real easing, real data, real devices. Static comps lie.</p></div></div>
+    <div class="step"><span class="step__n">04</span><div><h3>Polish &amp; ship</h3><p>Frame-by-frame tuning, performance budget, handoff that developers actually like.</p></div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact" data-bg="#ff2d87" data-fg="#0b0b10">
+  <p class="eyebrow"><span>(06) Contact</span></p>
+  <h2 class="contact__title" data-split>LET'S MAKE</h2>
+  <h2 class="contact__title contact__title--outline" data-split>IT MOVE.</h2>
+  <div class="contact__row">
+    <button class="mail" id="mailBtn" data-magnet data-cursor="COPY"><span>pavlo.tsyhanash@gmail.com</span><i>↗</i></button>
+    <a class="pill pill--dark" href="mailto:pavlo.tsyhanash@gmail.com?subject=Project%20inquiry" data-magnet>Start a project</a>
+  </div>
+  <footer class="foot"><span>© 2026 Pavlo Tsyhanash</span><span>Designed &amp; coded by hand</span><a href="#hero" data-magnet>Back to top ↑</a></footer>
+</section>
+
+</main>
+
+<div class="toast" id="toast">Email copied ✓</div>
+<script src="main.js"></script>
+</body>
+</html>
